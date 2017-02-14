@@ -2,10 +2,10 @@ module.exports = {
   entry: './src/main.js', // this is the path to your main JS file
   module: {
     loaders: [
-      {
-        test: /\.html$/,
-        loader: 'html-loader?attrs=false',
-      },
+      // {
+      //   test: /\.html$/,
+      //   loader: 'html-loader?attrs=false',
+      // },
       {
         test: /\.json$/,
         loader: 'json-loader',
