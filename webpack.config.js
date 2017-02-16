@@ -1,11 +1,16 @@
 module.exports = {
   entry: './src/main.js', // this is the path to your main JS file
+  output: {
+    path: './bin', // path to where you want the built file
+    publicPath: './bin',
+    filename: 'bundle.js', // name you want of built file
+  },
+  devServer: {
+    port: 8080,
+    historyApiFallback: true,
+  },
   module: {
     loaders: [
-      // {
-      //   test: /\.html$/,
-      //   loader: 'html-loader?attrs=false',
-      // },
       {
         test: /\.json$/,
         loader: 'json-loader',
@@ -21,10 +26,4 @@ module.exports = {
     ],
   },
   devtool: 'cheap-source-map',
-  debug: true,
-  output: {
-    path: './bin', // path to where you want the built file
-    publicPath: '/bin',
-    filename: 'bundle.js', // name you want of built file
-  },
 };
