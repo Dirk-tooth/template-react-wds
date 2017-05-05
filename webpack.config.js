@@ -1,8 +1,8 @@
 module.exports = {
   entry: './src/main.js', // this is the path to your main JS file
   output: {
-    path: './bin', // path to where you want the built file
-    publicPath: './bin',
+    path: '/bin', // path to where you want the built file
+    publicPath: '/bin',
     filename: 'bundle.js', // name you want of built file
   },
   devServer: {
