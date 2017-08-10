@@ -6,7 +6,7 @@ module.exports = {
     filename: 'bundle.js', // name you want of built file
   },
   devServer: {
-    port: 8080,
+    port: 8086,
     historyApiFallback: true,
   },
   module: {
