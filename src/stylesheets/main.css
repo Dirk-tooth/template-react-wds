@@ -1,0 +1,19 @@
+.slider-container {
+	width: 100%;
+	padding: 0% 25% 0% 25%;
+}
+
+.slider-div {
+	margin: 2%;
+	padding: 1%;
+	text-align: center;
+}
+
+.crusher {
+	font-size: 2em;
+}
+
+.crush-score {
+	font-size: 3em;
+	font-weight: bold;
+}

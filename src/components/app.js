@@ -5,22 +5,37 @@ class Default extends React.Component {
   constructor() {
     super();
     this.state = {
-      crushFactor: 20,
+      crushers: [
+        {
+          name: 'Trevor',
+          score: 50,
+        },
+        {
+          name: 'Lloyd',
+          score: 50,
+        },
+      ],
     };
   }
 
-  handleOnChange(e) {
-    this.setState({ crushFactor: e });
+  handleOnChange(e, crusherInQuestion) {
+    this.setState({ crushers: this.state.crushers.map(crusher => crusher.name === crusherInQuestion ?
+			{ name: crusherInQuestion, score: e.target.value } :
+						crusher,
+			),
+    });
   }
 
   render() {
     return (
       <div>
-        {"crushin' it"}
-        <CrushSlider
-          handleOnChange={() => this.handleOnChange()}
-          crushFactor={this.state.crushFactor}
-					/>
+        {this.state.crushers.map((crusher, idx) => (<div className="slider-container" key={idx}>
+          <CrushSlider
+            handleOnChange={(e, crusherInQuestion) => this.handleOnChange(e, crusherInQuestion)}
+            crushFactor={crusher.score}
+            crusher={crusher.name}
+				/>
+        </div>))}
       </div>
     );
   }

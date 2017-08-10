@@ -2,12 +2,14 @@ import React from 'react';
 
 function CrushSlider(props) {
   return (
-    <div>
+    <div className="slider-div">
+      <div className="crusher">{props.crusher}</div>
       <input
+        className="slider"
         type="range"
-        onChange={props.handleOnChange}
+        onChange={e => props.handleOnChange(e, props.crusher)}
 				/>
-      <p>{props.value}</p>
+      <p className="crush-score">{props.crushFactor}</p>
     </div>
   );
 }
