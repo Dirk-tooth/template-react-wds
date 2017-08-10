@@ -1,16 +1,16 @@
 import React from 'react';
-import CrushSlider from 'crushSlider';
+import CrushSlider from './crushSlider';
 
 class Default extends React.Component {
   constructor() {
     super();
     this.state = {
-      crushFactor: 50,
+      crushFactor: 20,
     };
   }
 
   handleOnChange(e) {
-    this.setState({ crushFactor: e.target.value });
+    this.setState({ crushFactor: e });
   }
 
   render() {

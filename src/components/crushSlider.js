@@ -1,12 +1,14 @@
 import React from 'react';
-import Slider from 'react-rangeslider';
 
 function CrushSlider(props) {
   return (
-    <Slider
-      value={props.crushFactor}
-      onChange={props.handleOnChange}
-			/>
+    <div>
+      <input
+        type="range"
+        onChange={props.handleOnChange}
+				/>
+      <p>{props.value}</p>
+    </div>
   );
 }
 
